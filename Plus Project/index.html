@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>  
+</head>
+  <body>
+    <div class="container"> 
+    <h1></h1>
+    <form id="which-place">
+      <input type="search" 
+      placeholder="Enter City" 
+      id="city-search" 
+      autocomplete="off">
+
+    <input type="submit" 
+    value="search"> 
+    </form>
+    <br>
+  
+    <button class="btn btn-dark w-35" id="current-location">
+     Current Location
+    </button>
+  
+       <h2></h2>
+       <ul>
+      <li> <span id="city"></span> </li>
+       <li><span id ="temperature"></span>°F</li>
+       <li> Description: <span id="description"></span></li>
+      <li> Humidity: <span id="humidity"></span>%</li>
+      <li>Wind:<span id="wind"></span>mph</li>
+     </ul>
+     
+     <p id ="temperature-feelsLike"></p>
+      <div id = "what-toExpect"></div>
+     
+      
+  
+    
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col">
+<div class="card border-dark rounded-1 border-end-0 border-start-0">          <div class="mb-2 bg-success bg-gradient text-white"><h5 class="card-header">Day of the Week</h5></div>
+            <div class="card-body">
+             
+              <span class="degrees">86° ☀️</span>
+           <br />
+              <p class="text-end">
+                <span class="questions"> What to expect? </span>
+                <br>
+                <span class="answers">Rain, so. much. rain. </span>
+                <br />
+                <span class="questions"> When? </span>
+                <br>
+                <span class="answers"> 3pm</span>
+                <br />
+                 <p class="howCanI">
+                 <span class="questions"> 
+                  How can I be ready? 
+                </span>
+                
+                <br />
+                <span class="answers">Clothes</span>
+              </p>
+</p>
+              
+            </div>
+            <div class="bg-success bg-gradient text-white"><div class="card-footer"><p class="card-text1">
+                <small class="fst-italic"> Last updated 3 mins ago</small>
+              </p></div></div>
+          </div>
+        </div>
+        <div class="col">
+<div class="card border-dark rounded-1 border-end-0 border-start-0">
+           <div class="mb-2 bg-success bg-gradient text-white"><h5 class="card-header">Day of the Week</h5></div>
+            <div class="card-body">
+              
+              <span class="degrees">86° ☀️</span>
+              <br />
+              <p class="text-end">
+                <span class="questions"> What to expect? </span>
+                <br>
+                <span class="answers">Rain, so. much. rain. </span>
+                <br />
+                <span class="questions"> When? </span>
+                <br>
+              <span class="answers"> 3pm</span>
+                <br />
+                 <p class="howCanI">
+                 <span class="questions"> 
+                  How can I be ready? 
+                </span>
+                
+                <br />
+                <span class="answers">Clothes</span>
+              </p>
+</p>
+              
+            </div>
+           <div class="bg-success bg-gradient text-white"><div class="card-footer"><p class="card-text1">
+                <small class="fst-italic"> Last updated 3 mins ago</small>
+              </p></div></div>
+          </div>
+        </div>
+        <div class="col">
+    <div class="card border-dark rounded-1 border-end-0 border-start-0">
+            <div class="mb-2 bg-success bg-gradient text-white"><h5 class="card-header">Day of the Week</h5></div>
+            <div class="card-body">
+              
+              <span class="degrees">86° ☀️</span>
+              <br />
+              <p class="text-end">
+                <span class="questions"> What to expect? </span>
+                <br>
+                <span class="answers">Rain, so. much. rain. </span>
+                <br />
+                <span class="questions"> When? </span>
+                <br>
+                <span class="answers"> 3pm</span>
+                <br />
+                 <p class="howCanI">
+                 <span class="questions"> 
+                  How can I be ready? 
+                </span>
+                
+                <br />
+                <span class="answers">Clothes</span>
+              </p>
+</p>
+              
+            </div>
+            <div class="bg-success bg-gradient text-white"><div class="card-footer"><p class="card-text1">
+                <small class="fst-italic"> Last updated 3 mins ago</small>
+              </p></div></div>
+          </div>
+        </div>
+        <div class="col">
+       <div class="card border-dark rounded-1 border-end-0 border-start-0">
+            <div class="mb-2 bg-success bg-gradient text-white"><h5 class="card-header">Day of the Week</h5></div>
+            <div class="card-body">
+              
+              <span class="degrees">86° ☀️</span>
+              <br />
+              <p class="text-end">
+                <span class="questions"> What to expect? </span>
+                <br>
+                <span class="answers">Rain, so. much. rain. </span>
+                <br />
+                <span class="questions"> When? </span>
+                <br>
+                <span class="answers"> 3pm</span>
+                <br />
+                 <p class="howCanI">
+                 <span class="questions"> 
+                  How can I be ready? 
+                </span>
+                
+                <br />
+               <span class="answers">Clothes</span>
+              </p>
+</p>
+              
+            </div>
+           <div class="bg-success bg-gradient text-white"><div class="card-footer"><p class="card-text1">
+                <small class="fst-italic"> Last updated 3 mins ago</small>
+              </p></div></div>
+          </div>
+        </div>
+        <div class="centeredCard">
+          <div class="col">
+            <div class="card border-dark rounded-1 border-end-0 border-start-0">
+
+        <div class="mb-2 bg-success bg-gradient text-white"><h5 class="card-header bg-transparent">Day of the Week</h5></div>
+            <div class="card-body">
+              
+              <br />
+              <span class="degrees">86° ☀️</span>
+              <br />
+              <p class="text-end">
+                <span class="questions"> What to expect? </span>
+                <br>
+                <span class="answers">Rain, so. much. rain. </span>
+                <br />
+                <span class="questions"> When? </span>
+                <br>
+                <span class="answers"> 3pm</span>
+                <br />
+                 <p class="howCanI">
+                 <span class="questions"> 
+                  How can I be ready? 
+                </span>
+                
+                <br />
+                <span class="answers">Clothes</span>
+              </p>
+</p>
+            </div>
+          <div class="bg-success bg-gradient text-white"><div class="card-footer border-dark rounded-1"><p class="card-text1">
+                <small class="fst-italic"> Last updated 3 mins ago</small>
+              </p></div></div>
+              </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/js-data-types.js"> 
+    
+    </script>
+
+    
+  </body>
+</html>
