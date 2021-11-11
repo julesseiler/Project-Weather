@@ -25,6 +25,24 @@ ul {
   font-weight: 700;
 }
 
+button {
+  display: block;
+}
+
+input {
+  background-color: #212529;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  border-color: #f8f9fa;
+  align-items: center;
+  border-image: none;
+  padding: 5px 10px;
+}
+
+.cityTemp {
+  color: white;
+}
 .whereInWorld {
   padding-top: 1rem;
   color: white;
