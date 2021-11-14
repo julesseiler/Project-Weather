@@ -41,6 +41,12 @@ function displayWeatherCondition(response) {
     response.data.weather[0].description;
   let dateElement = document.querySelector("#dateCurrently");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function searchLocation(position) {
   let apiKey = "2c90b0d59996cfce68787afc7b6b6265";
