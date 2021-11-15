@@ -46,3 +46,7 @@ a {
 .cityTemp .active:hover {
   text-decoration: underline;
 }
+
+.emoji {
+  size: 100rem;
+}

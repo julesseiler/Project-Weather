@@ -61,16 +61,11 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-search").value;
   searchCity(city);
 }
-let theSearchForm = document.querySelector("#which-place");
-theSearchForm.addEventListener("submit", handleSubmit);
 
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-
-let currentLocationButton = document.querySelector("#current-location");
-currentLocationButton.addEventListener("click", getCurrentLocation);
 
 function displayCelciusTemperature(event) {
   event.preventDefault();
@@ -88,6 +83,12 @@ function displayFahrenTemperature(event) {
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
+
+let theSearchForm = document.querySelector("#which-place");
+theSearchForm.addEventListener("submit", handleSubmit);
+
+let currentLocationButton = document.querySelector("#current-location");
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let celciusLink = document.querySelector("#celcius-Link");
 celciusLink.addEventListener("click", displayCelciusTemperature);
