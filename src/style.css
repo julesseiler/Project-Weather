@@ -33,7 +33,16 @@ input {
   border-image: none;
   padding: 5px 10px;
 }
+a {
+  text-decoration: none;
+}
 
-.cityTemp {
+.cityTemp .active {
   color: black;
+  cursor: default;
+  text-decoration: none;
+}
+
+.cityTemp .active:hover {
+  text-decoration: underline;
 }
