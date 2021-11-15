@@ -71,3 +71,11 @@ function getCurrentLocation(event) {
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  alert("Link Clicked");
+}
+
+let celciusLink = document.querySelector("#celcius-Link");
+celciusLink.addEventListener("click", displayCelciusTemperature);
