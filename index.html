@@ -45,7 +45,7 @@
      Current Location
     </button>
   <br>
-  <ul>
+  
        
        <div class="row">
          <div class="col-6">
@@ -53,13 +53,15 @@
         alt="xxx"
         id ="icon">
          <div class="cityTemp"> 
-       <li> <span id="city"></span> </li>
+        <span id="city"></span> 
        <br>
-       <li> <span id ="temperature"></span><a href = "#" id="fahrenheit-Link" class="active">°F</a> |<a href = "#" id="celcius-Link"> C°</a> </li>
-       
+ <span id ="temperature"></span>
+ <a href = "#" id="fahrenheit-Link" class="active">°F</a> |<a href = "#" id="celcius-Link"> C°</a>
+<div class="weather-forecast">     
 </div>
 </div>
-<div class="col-6" id="columnRight">
+<div class="col-6">
+  <ul>
   <li id="emoji">🎃</li>
         <li>Description: <span id="description"></span></li>
         <br>
@@ -67,6 +69,27 @@
        <br>
       <li>Wind: <span id="wind"></span> mph</li>
     </ul> 
+    </div>
+  </div>
+  <div class="weather-forecast">
+    <div class="row"> 
+      <div class="col-2">
+        <div class="weather-forecast-date">
+    Thursday
+    </div>
+    <img src="http://openweathermap.org/img/wn/01d@2x.png" 
+    alt="" width="42"/>
+    <div class="weather-forecast-temperatures">
+    <span class="weather-forecast-temperature-max">
+      18°
+   </span>
+      <span class="weather-forecast-temperature-min">
+        12°
+        </span>
+    </div>
+</div>
+  </div> 
+</div>  
     </div>
       </div>
       </div>
