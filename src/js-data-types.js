@@ -57,6 +57,7 @@ function displayForecast() {
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
 }
 
 function displayWeatherCondition(response) {
