@@ -27,7 +27,13 @@
     <div class="container"> 
      <div class="card">
   <div class="card-body">
-    
+    <div class="row">
+    <div class="col-6">
+    <button id="current-location">
+     Current Location
+    </button>
+    </div>
+    <div class="col-6">
     <form id="which-place">
       <input type="search" 
       placeholder="Enter City" 
@@ -37,16 +43,17 @@
     <input type="submit" 
     value="Search"
     id="search-button"> 
+    </div>
     </form>
     <br>
-    <button id="current-location">
-     Current Location
-    </button>
+
     <span class="lastUpdated">
-    Last updated:
+    <div class="col-12">
+      Last updated:
     <span id="dateCurrently"></span>
     </span>
-    
+    </div>
+    </div>
   <br>
   <div class="row">
        <div class="col-6">
@@ -87,9 +94,9 @@
       </div>
   <br>
      
-    <a href="https://github.com/julesseiler/Project-Weather">Find me on GitHub</a>
-    <script src="src/js-data-types.js"> 
+    <a href="https://github.com/julesseiler/Project-Weather" id="findMe">Julie Seiler on GitHub</a>
     
+    <script src="src/js-data-types.js"> 
     </script>
   </body>
 </html>

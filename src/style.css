@@ -1,5 +1,8 @@
 body {
-  margin: 50px;
+  margin-top: 50px;
+}
+.card {
+  border: 2px orange solid;
 }
 h1 {
   text-align: center;
@@ -22,11 +25,12 @@ button {
   border-radius: 5px;
   background-color: transparent;
   border: 2px solid orange;
+  padding: 10px 5px;
 }
 
 button:hover {
-  background-color: hotpink;
-  color: lime;
+  background-color: black;
+  color: orange;
 }
 
 input {
@@ -37,6 +41,13 @@ input {
   padding: 5px 10px;
   background-color: white;
 }
+#search-button {
+  padding: 10 0;
+}
+#city-search {
+  padding-right: 200px;
+  margin-right: 15px;
+}
 
 input:hover {
   background-color: black;
@@ -45,10 +56,7 @@ input:hover {
 
 .lastUpdated {
   font-size: xx-small;
-}
-
-a {
-  text-decoration: none;
+  text-align: center;
 }
 
 .cityTemp {
@@ -60,6 +68,9 @@ a {
 
 .weather-forecast {
   color: black;
+  padding-top: 55px;
+  text-transform: capitalize;
+  text-align: center;
 }
 
 .weather-forecast-date {
@@ -73,4 +84,11 @@ a {
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+}
+
+a {
+  margin-left: 700px;
+  text-align: center;
+  font-weight: 500;
+  font-size: small;
 }
