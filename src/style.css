@@ -2,15 +2,13 @@ body {
   margin: 50px;
 }
 h1 {
-  color: black;
+  text-align: center;
+  font-weight: 100;
+  line-height: 1.5;
 }
-
 ul {
   list-style: none;
-  padding-left: 1rem;
-  margin-bottom: 0;
   text-align: center;
-  color: black;
   font-size: larger;
   font-weight: 700;
 }
@@ -21,39 +19,46 @@ li {
 
 button {
   display: block;
+  border-radius: 5px;
+  background-color: transparent;
+  border: 2px solid orange;
+}
+
+button:hover {
+  background-color: hotpink;
+  color: lime;
 }
 
 input {
-  background-color: black;
-  color: white;
   border-radius: 5px;
-  border: 1px solid transparent;
-  border-color: white;
+  border: 2px solid orange;
   align-items: center;
   border-image: none;
   padding: 5px 10px;
+  background-color: white;
 }
+
+input:hover {
+  background-color: black;
+  color: orange;
+}
+
+.lastUpdated {
+  font-size: xx-small;
+}
+
 a {
   text-decoration: none;
 }
 
-.cityTemp .active {
-  color: black;
-  cursor: default;
-  text-decoration: none;
+.cityTemp {
+  text-align: center;
 }
-
-.cityTemp .active:hover {
-  text-decoration: underline;
-}
-
-.emoji {
-  size: 100rem;
+.icon {
+  display: block;
 }
 
 .weather-forecast {
-  margin-top: 20px;
-  text-align: center;
   color: black;
 }
 

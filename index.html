@@ -25,11 +25,9 @@
 </head>
   <body>
     <div class="container"> 
-     <h1> 
-    Last updated:
-    <br>
-    <span id="dateCurrently"></span>
-    </h1>
+     <div class="card">
+  <div class="card-body">
+    
     <form id="which-place">
       <input type="search" 
       placeholder="Enter City" 
@@ -37,42 +35,51 @@
       autocomplete="off">
 
     <input type="submit" 
-    value="search"
-    class="btn btn-primary"> 
+    value="Search"
+    id="search-button"> 
     </form>
     <br>
-    <button class="btn btn-dark w-35 btn-outline-light" id="current-location">
+    <button id="current-location">
      Current Location
     </button>
+    <span class="lastUpdated">
+    Last updated:
+    <span id="dateCurrently"></span>
+    </span>
+    
   <br>
-  
-       
-       <div class="row">
-         <div class="col-6">
+  <div class="row">
+       <div class="col-6">
+      <div class="cityTemp"> 
         <img src=" http://openweathermap.org/img/wn/10d@2x.png"
         alt="xxx"
-        id ="icon">
-         <div class="cityTemp"> 
+        id ="icon"
+        width="90">
+        <br>
         <span id="city"></span> 
        <br>
  <span id ="temperature"></span>°F 
- <div class="weather-forecast">     
+   
 </div>
 </div>
 <div class="col-6">
-  <ul>
-  <li id="emoji">🎃</li>
-        <li>Description: <span id="description"></span></li>
+<div class="weather-forecast">
+ 
+  
+        Description: <span id="description"></span>
         <br>
-       <li>Humidity: <span id="humidity"></span>%</li>
+       Humidity: <span id="humidity"></span>%
        <br>
-      <li>Wind: <span id="wind"></span> mph</li>
-    </ul> 
+      Wind: <span id="wind"></span> mph
+    
+    </div>
     </div>
   </div>
   <div class="weather-forecast" id="forecast">
     
   </div> 
+  </div>
+</div>
 </div>  
     </div>
       </div>
