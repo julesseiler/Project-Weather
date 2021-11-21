@@ -123,23 +123,10 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function displayFahrenTemperature(event) {
-  event.preventDefault();
-  fahrenLink.classList.add("active");
-  celciusLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
-}
-
 let theSearchForm = document.querySelector("#which-place");
 theSearchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-let fahrenLink = document.querySelector("#fahrenheit-Link");
-fahrenLink.addEventListener("click", displayFahrenTemperature);
-
-let fahrenheitTemp = null;
 
 searchCity("New York");
